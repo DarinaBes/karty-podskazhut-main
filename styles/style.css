@@ -1,3 +1,11 @@
+:root {
+  --bg-color: #F3EFEC;
+  --text-color: #312A4E;
+  --accent-color:#FFAB6B;
+  --accent-font: 'STIX Two Text';
+  --main-font: 'Raleway';
+  }
+
 *,
 *::before,
 *::after {
@@ -7,6 +15,9 @@
 .page {
   min-inline-size: 360px;
   margin: 0;
+  background-color: var(--bg-color);
+  font-family: var(--main-font);
+  color: var(--text-color);
 }
 
 p,
@@ -19,4 +30,77 @@ ol,
 li,
 figure {
   margin: 0;
+  list-style: none;
+}
+
+.header {
+  padding-block-start: 10%;
+}
+
+.heading {
+font-family: var(--accent-font);
+color: var(--text-color);
+font-style: normal;
+font-weight: 600;
+line-height: 90%; /* 27px */
+text-align: center;
+}
+
+.header__title {
+  font-size: clamp(3.75rem, 2.5rem + 5.5556vw, 7.5rem);
+  margin-block-end: 40px;
+}
+
+.content-section {
+padding: 0 5vi;
+}
+
+.content__title {
+  font-size: 30px;
+  margin: 7% 0 2.5%;
+}
+
+.header__menu {
+
+}
+
+.header__logo {
+
+}
+
+.header__theme-toggler {
+
+}
+
+.header__theme-button {
+
+}
+
+.header__theme-button_is-active {
+
+}
+    
+.content__text-block {
+  font-size: 18px;
+}
+
+/* выбирает все вложенные абзацы, кроме последнего */
+.content__text-block .content__paragraph:not(:last-of-type) {
+  margin-block-end: 1.5em;
+}
+
+.content__text-block a {
+  color: inherit;
+}
+
+.content__blockquote {
+font-style: italic;
+line-height: 200%; /* 36px */
+margin: 0 auto 1.5em;
+inline-size: 75%;
+}
+
+.content__list {
+  list-style: none;
+  padding: 0 0 0 40px;
 }
